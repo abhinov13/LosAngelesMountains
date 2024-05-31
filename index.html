@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Los Angeles Mountains</title>
+    <link rel="icon" type="image/x-icon" href="assets\lam-logo.png">
+    <link rel="stylesheet" href="styles.css" />
+    <script src="scheduleSelector.js" defer></script>
+  </head>
+  <body>
+    <div>
+      <!-- header section begin -->
+      <img src="assets\lam-hero-image.png" class="parallax parallax-bg" />
+      <img src="assets\lam-hero-image-mask.png" class="parallax parallax-fg" />
+      <div class="header">
+        <div class="content">
+          <div class="header-navbar">
+            <img src="assets\lam-logo.png" />
+            <div>
+              <a href="#history-page"><i>01. HISTORY</i></a>
+              <a href="#climb-page"><i>02. TEAM</i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- header section end -->
+
+      <!-- history section begin -->
+      <div class="history" id="history-page">
+        <div class="history-header">
+          <div class="history-nav">
+            <div>
+              <img src="assets\lam-logo.png" />
+              <img src="assets\lam-logo-text.png" />
+            </div>
+            <div>
+              <div class="history-links">
+                <a href="#history-page"><i>01. HISTORY</i></a>
+                <a href="#climb-page"><i>02. TEAM</i></a>
+              </div>
+            </div>
+          </div>
+          <div class="content">
+            <img src="assets\lam-big-01-title.png" />
+            <div>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+              ligula leo, accumsan sit amet ante vel, condimentum tincidunt
+              libero. Vestibulum condimentum risus nisi. Fusce in tortor
+              iaculis, placerat nulla at, finibus urna. Nulla blandit leo lacus,
+              et elementum ex vulputate id. Fusce varius nec massa eu aliquet.
+              Sed tristique semper fringilla. Nam a convallis lorem.
+            </div>
+          </div>
+        </div>
+        <div class="history-carousel">
+          <div class="images">
+            <img src="assets\lam-first-carousel-image.png" />
+            <img src="assets\lam-second-carousel-image.png" />
+            <img src="assets\lam-first-carousel-image.png" />
+            <img src="assets\lam-second-carousel-image.png" />
+          </div>
+          <div class="carousel-jump-buttons">
+            <button />
+            <button />
+            <button />
+            <button />
+          </div>
+        </div>
+      </div>
+
+      <!-- history section end -->
+
+      <!-- climb section begin -->
+      <div class="climb" id="climb-page">
+        <div class="climb-header">
+          <img src="assets\lam-big-02-title.png" alt="02. Climb" />
+          <div>
+            Cras consequat ullamcorper finibus. Aliquam sagittis metus nunc, sed
+            porttitor sem dignissim id. Suspendisse non tortor mollis, facilisis
+            dui non, faucibus est. Mauris rhoncus orci eu mauris aliquet, eu
+            bibendum metus aliquam.
+          </div>
+        </div>
+        <div class="schedule-selector">
+          <button
+            style="margin-left: 20%"
+            class="active-schedule schedule-btn"
+            onclick="updateSelectedSchedule(this, 'schedule-1')"
+          >
+            MOUNTAIN 1
+          </button>
+          <button
+            class="schedule-btn"
+            onclick="updateSelectedSchedule(this, 'schedule-2')"
+          >
+            MOUNTAIN 2
+          </button>
+        </div>
+        <div class="schedule">
+          <!-- second section set visibility of below divs according to mountain selected -->
+          <div id="schedule-1" class="schedule-option active">
+            <img src="assets\lam-tab-1-schedule.png" />
+          </div>
+          <div id="schedule-2" class="schedule-option">
+            <img src="assets\lam-tab-2-schedule.png" />
+          </div>
+        </div>
+        <div class="climb-footer">
+          <img src="assets\lam-footer-logo.png" />
+          <i>COPYRIGHT 2016. ALL RIGHTS RESERVED</i>
+        </div>
+      </div>
+      <!-- climb section end -->
+    </div>
+  </body>
+</html>

@@ -1,0 +1,303 @@
+* {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+a{
+  color: inherit;
+}
+
+body {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+body > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 1px;
+  transform-style: preserve-3d;
+}
+
+body > div > div {
+  height: 100vh;
+  width: 100vw;
+  flex-shrink: 0;
+  background-color: white;
+}
+
+/* header section */
+
+.header {
+  position: relative;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  background-color: rgba(0,0,0,0);
+}
+
+.parallax {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.parallax-fg {
+  transform: translateZ(-1px) scale(2);
+}
+.parallax-bg {
+  transform: translateZ(-10px) scale(11);
+}
+
+.header > .content {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+
+.header-navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.header-navbar > div {
+  color: white;
+  text-decoration: underline;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  font-weight: bold;
+  font-size: small;
+  text-underline-offset: 3px;
+}
+
+/* history section */
+
+.history{
+  background-image: url("assets/lam-middle-image.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.history-nav{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-top: 5px;
+  background-color: white;
+}
+
+.history-links{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  gap: 20px;
+  color: #404f6c;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: bold;
+}
+
+.history-header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.history-header>img{
+  align-self: flex-start;
+  height: 10vh;
+  object-fit: contain;
+  flex-grow: 0;
+}
+
+.history-header>.content{
+  width: 50vw;
+  margin-top: 10vh;
+}
+
+.history-header>.content>img{
+  transform: translateX(-50%);
+}
+
+.history-carousel{
+  height: 20vh;
+  margin-top: auto;
+  width: 100vw;
+  background-color: rgba(53, 66, 90, 0.85);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  padding: 2vh 0 2vh 0;
+}
+
+.history-carousel>div{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+}
+
+.history-carousel>.images{
+  flex: 1;
+  gap: 10px;
+}
+
+.history-carousel>.images>img{
+  height: 100%;
+}
+
+.history-carousel>.carousel-jump-buttons{
+  gap: 10px;
+}
+
+.history-carousel>.carousel-jump-buttons>button{
+  border-radius: 50%;
+  background-color: white;
+  width: 5px;
+  aspect-ratio: 1/1;
+  border: none;
+  outline: none;
+}
+
+
+/* climb section  */
+.climb {
+  display: flex;
+  flex-direction: column;
+  background-color: #404f6c;
+}
+
+.climb-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 15vh;
+  padding: 2vh 0 2vh 0;
+  overflow: hidden;
+  background-color: white;
+  color: #3c3c3c;
+}
+
+.climb-header > img {
+  object-fit: contain;
+}
+
+.climb-header > div {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40vw;
+}
+
+.schedule-selector {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  height: 5vh;
+  background-color: #404f6c;
+  color: #b0b4be;
+  gap: 5px;
+}
+
+.schedule-selector > .active-schedule {
+  background-color: #b0b4be;
+  color: #404f6c;
+  text-decoration: underline;
+}
+
+.schedule-selector > button {
+  font-size: larger;
+  font-weight: bolder;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 10px 0px 10px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.schedule {
+  flex: 1;
+  position: relative;
+}
+
+.schedule > div {
+  background-size: 100% 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.schedule>.active{
+  opacity: 1 !important;
+}
+
+.schedule > div > img {
+  position: absolute;
+  left: 20%;
+  top: 20%;
+}
+
+#schedule-1 {
+  background: url("assets/lam-tab-1.png");
+}
+#schedule-2 {
+  background: url("assets/lam-tab-2.png");
+}
+
+#schedule-1, #schedule-2{
+  background-repeat: no-repeat !important;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.climb-footer {
+  background-color: #404f6c;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  color: #61759e;
+  font-weight: bold;
+}
+
+.climb-footer > i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
